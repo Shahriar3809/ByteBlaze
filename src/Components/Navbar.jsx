@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -25,7 +26,6 @@ const Navbar = () => {
     
     return (
       <div>
-        
         <div className="navbar bg-base-100 w-full shadow-lg px-4 fixed z-10">
           <div className="flex-1">
             <a className="btn btn-ghost gap-0 text-2xl font-bold text-secondary ">
@@ -33,22 +33,37 @@ const Navbar = () => {
             </a>
           </div>
           <div className="flex-none">
-            <ul className="menu menu-horizontal px-1 text-xl font-bold">
+            <ul className="mx-5 flex gap-8 menu-horizontal px-1 text-xl font-bold">
               <li>
-                <a>Home</a>
+                {/* isActive - destructured */}
+                <NavLink
+                  to="/"
+                  className={({ isActive }) => (isActive ? "text-primary" : "")}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <a className="text-primary">Blogs</a>
+                <NavLink
+                  to="/blogs"
+                  className={({ isActive }) => (isActive ? "text-primary" : "")}
+                >
+                  Blogs
+                </NavLink>
               </li>
               <li>
-                <a>Bookmarks</a>
+                <NavLink
+                  to="/bookmarks"
+                  className={({ isActive }) => (isActive ? "text-primary" : "")}
+                >
+                  Bookmarks
+                </NavLink>
               </li>
             </ul>
             <label className="cursor-pointer grid place-items-center">
               <input
                 onChange={handleToggle}
                 type="checkbox"
-                
                 className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
               />
               <svg

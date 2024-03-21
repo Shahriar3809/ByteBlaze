@@ -1,7 +1,7 @@
 
 import './App.css'
-import Blog from './Pages/Blog';
-import Bookmark from './Pages/Bookmark';
+import Blog from './Pages/Blogs';
+import Bookmark from './Pages/Bookmarks';
 import Home from './Pages/Home'
 
 function App() {
