@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link, Outlet, useLoaderData, useNavigation } from "react-router-dom";
 import Loader from "../Components/Loader";
 
+import { MdBookmarkAdd } from "react-icons/md";
+import { saveBlog } from "../Utils";
+
 
 const BlogPage = () => {
     const blog = useLoaderData()
@@ -16,6 +19,10 @@ const BlogPage = () => {
       tags
     } = blog;
    
+
+    const handleBookmark = (blog) => {
+        saveBlog(blog)
+    }
     
       return (
         <div className="max-w-3xl px-6 py-16 mx-auto space-y-12">
@@ -89,6 +96,11 @@ const BlogPage = () => {
                 </svg>
                 <span>Author</span>
               </Link>
+              <div onClick={() => handleBookmark(blog)}>
+                <button>
+                  <MdBookmarkAdd className="text-3xl text-purple-500" />
+                </button>
+              </div>
             </div>
 
             <Outlet></Outlet>

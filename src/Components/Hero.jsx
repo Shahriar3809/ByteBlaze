@@ -30,7 +30,7 @@ const Hero = () => {
               </Link>
 
               <Link
-                to="/blogs"
+                to="/bookmarks"
                 href="#_"
                 className="relative inline-block px-4 py-2 font-medium group"
               >

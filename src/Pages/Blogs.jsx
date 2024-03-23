@@ -44,7 +44,7 @@ const Blogs = () => {
             
 
         {
-            blogs.map((blog)=> <Blog blog={blog} key={blog.id}></Blog>)
+            blogs.slice(1, 19).map((blog)=> <Blog blog={blog} key={blog.id}></Blog>)
         }
 
 
