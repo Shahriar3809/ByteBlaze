@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -28,9 +28,9 @@ const Navbar = () => {
       <div>
         <div className="navbar bg-base-100 w-full shadow-lg px-4 fixed z-10">
           <div className="flex-1">
-            <a className="btn btn-ghost gap-0 text-2xl font-bold text-secondary ">
+            <NavLink to='/' className="btn btn-ghost gap-0 text-2xl font-bold text-secondary ">
               <span className="text-primary">Byte</span>Blaze
-            </a>
+            </NavLink>
           </div>
           <div className="flex-none">
             <ul className="mx-5 flex gap-8 menu-horizontal px-1 text-xl font-bold">
